@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pictionary Game Cards</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+
+    /* Instruction box that hides when printing */
+    .instructions {
+        background: white;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    
+    button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    /* The Container for the cards */
+    .category-section {
+        max-width: 850px; /* Fits standard paper width */
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        margin-bottom: 40px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #333;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 Cards across */
+        gap: 0;
+        border-top: 1px dashed #999;
+        border-left: 1px dashed #999;
+    }
+
+    .card {
+        border-right: 1px dashed #999;
+        border-bottom: 1px dashed #999;
+        height: 120px; /* Fixed height for uniformity */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        position: relative;
+        background-color: white;
+    }
+
+    .word {
+        font-size: 22px;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 5px;
+        color: #000;
+    }
+
+    .cat-label {
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #888;
+        letter-spacing: 1px;
+        position: absolute;
+        bottom: 8px;
+    }
+
+    /* PRINT STYLES */
+    @media print {
+        body {
+            background-color: white;
+            padding: 0;
+        }
+        .instructions {
+            display: none;
+        }
+        .category-section {
+            box-shadow: none;
+            margin: 0;
+            padding: 0;
+            page-break-after: always; /* Force new page for each category */
+            width: 100%;
+            max-width: 100%;
+        }
+        .grid {
+            border-color: #000;
+        }
+        .card {
+            border-color: #000;
+            page-break-inside: avoid;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="instructions">
+    <h1>Pictionary Printable Cards</h1>
+    <p>This page contains 200 cards sorted by category.</p>
+    <p><strong>Tip:</strong> If you want to color-code them, load different colored paper into your printer before printing specific pages.</p>
+    <button onclick="window.print()">Print Cards</button>
+</div>
+
+<div class="category-section">
+    <h2>Easy (Kids)</h2>
+    <div class="grid">
+        <div class="card"><div class="word">Alligator</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Anchor</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Astronaut</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Backpack</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Balloon</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Banana</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Basketball</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Bat (Animal)</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Bee</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Bicycle</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Cactus</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Cake</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Camera</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Castle</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Clown</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Dinosaur</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Donut</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Elephant</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Fire Truck</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Fish</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Flower</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Ghost</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Giraffe</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Glasses</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Hamburger</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Helicopter</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Ice Cream</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Igloo</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Kite</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Ladder</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Lightning</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Monkey</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Mustache</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Octopus</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Penguin</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Pizza</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Pumpkin</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Rainbow</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Robot</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Scissors</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Shark</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Skeleton</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Snake</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Snowman</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Spider</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Sun</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Taco</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Toothbrush</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Turtle</div><div class="cat-label">Easy</div></div>
+        <div class="card"><div class="word">Volcano</div><div class="cat-label">Easy</div></div>
+    </div>
+</div>
+
+<div class="category-section">
+    <h2>Medium</h2>
+    <div class="grid">
+        <div class="card"><div class="word">Alarm Clock</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Ambulance</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Angel</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Band-Aid</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Barbecue</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Barn</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Baseball</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Battery</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Beehive</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Binoculars</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Birdhouse</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Boomerang</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Bowling</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Bubble Bath</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Bunk Bed</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Camping</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Chainsaw</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Chef</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Chess</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Chimney</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Chopsticks</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Disco Ball</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Doorbell</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Drum Set</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Elevator</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Farmer</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Fishing</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Flashlight</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Goal Post</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Golf</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Guitar</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Hair Dryer</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Hammock</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Headphones</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Hot Dog</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Lawn Mower</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Lipstick</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Mailbox</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Mermaid</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Microwave</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Mummy</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Ninja</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Pirate</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Scarecrow</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Seatbelt</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Skateboard</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Suitcase</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Telescope</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Toilet Paper</div><div class="cat-label">Medium</div></div>
+        <div class="card"><div class="word">Vampire</div><div class="cat-label">Medium</div></div>
+    </div>
+</div>
+
+<div class="category-section">
+    <h2>Hard (Adults)</h2>
+    <div class="grid">
+        <div class="card"><div class="word">Allergic</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Appetite</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Balance</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Blind Date</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Brain Freeze</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Bubblegum</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Camouflage</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Celebrity</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Cheating</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Claustrophobia</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Conversation</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Couch Potato</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Dandruff</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Dizzy</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Earthquake</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Electricity</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Exhausted</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Expensive</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Explosion</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Fashion</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Fog</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Freedom</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Gravity</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Hiccups</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Homework</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Insomnia</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Internet</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Invisible</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Jealous</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Laundry</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Magic</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Mirror</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Mosquito Bite</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Nightmare</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Noise</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Password</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Pollution</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Reflection</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Rollercoaster</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Shadow</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Sneeze</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Snoring</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Sticky</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Sunburn</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Traffic Jam</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Vacation</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Whisper</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">WiFi</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Wind</div><div class="cat-label">Hard</div></div>
+        <div class="card"><div class="word">Wireless</div><div class="cat-label">Hard</div></div>
+    </div>
+</div>
+
+<div class="category-section">
+    <h2>Pop Culture</h2>
+    <div class="grid">
+        <div class="card"><div class="word">Mickey Mouse</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Pikachu</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Spider-Man</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Darth Vader</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Harry Potter</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">SpongeBob</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Barbie</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Batman</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Minion</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Elsa (Frozen)</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Super Mario</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">The Hulk</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Winnie the Pooh</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Yoda</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Superman</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Scooby-Doo</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Cinderella</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">The Grinch</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Captain America</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Nemo (Fish)</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Shrek</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Wonder Woman</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Snoopy</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Simba (Lion)</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Ninja Turtle</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Blank (Free)</div><div class="cat-label">Pop Culture</div></div>
+        <div class="card"><div class="word">Blank (Free)</div><div class="cat-label">Pop Culture</div></div>
+    </div>
+</div>
+
+<div class="category-section">
+    <h2>Birthday Theme</h2>
+    <div class="grid">
+        <div class="card"><div class="word">Birthday Cake</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Candle</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Party Hat</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Present / Gift</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Balloon</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Confetti</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Streamers</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Piñata</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Wrapping Paper</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Bow</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Invitation</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Cupcake</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Goodie Bag</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Surprise</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Make a Wish</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Sleepover</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Karaoke</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Pizza Party</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Ice Cream Sundae</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Gift Card</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Unwrapping</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Sparkler</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Noisemaker</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Banner</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Camera</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Blank (Free)</div><div class="cat-label">Birthday</div></div>
+        <div class="card"><div class="word">Blank (Free)</div><div class="cat-label">Birthday</div></div>
+    </div>
+</div>
+
+</body>
+</html>
